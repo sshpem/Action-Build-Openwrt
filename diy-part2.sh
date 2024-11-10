@@ -11,10 +11,13 @@
 #
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
 # Modify default theme
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
+
+# Modify match up to GL.iNet GL-MT300N-V2 32MB SPI
+sed -i 's/reg = <0x50000 0xfb0000>;/reg = <0x50000 0x1fb0000>;/g' target/linux/ramips/dts/mt7628an_glinet_gl-mt300n-v2.dts
