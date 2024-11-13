@@ -3,7 +3,7 @@
 # Changes
 1. creat GL-iNet MT300N-V2 compile config
   1. creat config directory.
-  2. support 32M flash.
+  2. support **32M** flash.
   3. use default openwrt config, no more any other extra packages. it's pure firmware.
 
 # Original repo info:
