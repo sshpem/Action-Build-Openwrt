@@ -1,5 +1,12 @@
 **English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
+# Changes
+1. creat GL-iNet MT300N-V2 compile config
+  1. creat config directory.
+  2. support 32M flash.
+  3. use default openwrt config, no more any other extra packages. it's pure firmware.
+
+# Original repo info:
 # Actions-OpenWrt
 
 [![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE)
