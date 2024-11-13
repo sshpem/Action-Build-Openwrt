@@ -1,4 +1,4 @@
-**English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
+**English** | [中文](README-cn.md)
 
 # Changes
 1. creat GL-iNet MT300N-V2 compile config
