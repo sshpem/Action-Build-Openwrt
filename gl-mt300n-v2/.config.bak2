@@ -3,6 +3,8 @@ CONFIG_TARGET_ramips_mt76x8=y
 CONFIG_TARGET_ramips_mt76x8_DEVICE_glinet_gl-mt300n-v2=y
 
 CONFIG_PACKAGE_cgi-io=y
+CONFIG_PACKAGE_kmod-crypto-acompress=y
+CONFIG_PACKAGE_kmod-lib-lzo=y
 CONFIG_PACKAGE_libbpf=m
 CONFIG_PACKAGE_libelf=m
 CONFIG_PACKAGE_liblucihttp=y
