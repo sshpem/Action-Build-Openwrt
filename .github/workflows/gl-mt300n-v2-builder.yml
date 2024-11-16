@@ -57,6 +57,13 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
+    - name: Dependency kernel
+      run: |
+        ver = $(echo "$REPO_BRANCH" | sed 's/^v//')
+        cd openwrt
+        curl -sL https://downloads.openwrt.org/releases/$ver/targets/ramips/mt76x8/openwrt-$ver-ramips-mt76x8.manifest | grep "^kernel" | sed -e 's/.*-\(.*\)$/\1/' > .vermagic 
+        sed -i -e 's/^\(.\).*vermagic$/\1cp $(TOPDIR)\/.vermagic $(LINUX_DIR)\/.vermagic/' include/kernel-defaults.mk
+
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
