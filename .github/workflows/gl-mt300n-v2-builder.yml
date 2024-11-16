@@ -59,10 +59,14 @@ jobs:
 
     - name: Dependency kernel
       run: |
-        ver = $(echo "$REPO_BRANCH" | sed 's/^v//')
+        ver=$(echo "$REPO_BRANCH" | sed 's/^v//')
         cd openwrt
         curl -sL https://downloads.openwrt.org/releases/$ver/targets/ramips/mt76x8/openwrt-$ver-ramips-mt76x8.manifest | grep "^kernel" | sed -e 's/.*-\(.*\)$/\1/' > .vermagic 
         sed -i -e 's/^\(.\).*vermagic$/\1cp $(TOPDIR)\/.vermagic $(LINUX_DIR)\/.vermagic/' include/kernel-defaults.mk
+        echo "Extracted version: $ver"
+        echo "cat .vermagic"
+        cat .vermagic
+        cat include/kernel-defaults.mk | grep ".vermagic"
 
     - name: Load custom feeds
       run: |
