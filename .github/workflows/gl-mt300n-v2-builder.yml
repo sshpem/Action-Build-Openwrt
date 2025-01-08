@@ -18,7 +18,7 @@ on:
 
 env:
   REPO_URL: https://git.openwrt.org/openwrt/openwrt.git
-  REPO_BRANCH: v23.05.5
+  REPO_BRANCH: v21.02.7
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: gl-mt300n-v2/.config
   DIY_P1_SH: gl-mt300n-v2/diy-part1.sh
