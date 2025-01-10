@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: OpenWrt Builder gl-mt300n-v2
+name: OpenWrt Builder gl-mt300n-v2 v23.05.5
 
 on:
   repository_dispatch:
